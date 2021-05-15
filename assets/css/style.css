@@ -7,114 +7,220 @@
     --accent: #A3BCB6;
 }
 
-body, html {
-    background-color: var(--dark);
-    height: 100%;
-    color: var(--light);
-    font-family: 'Comfortaa';
+body {
+    background-color: var(--lighter);
+    color: var(--dark);
+    line-height: 1.3;
 }
 
+/* the header is intended to include a profile picture and my name. The text should be aligned to the left, and the image should be aligned to the right. As the page scales down, the picture should scale down, and the subtitle will disappear.  */
 
-.landing-page {
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://sandra-marr.github.io/Homework02/assets/images/background.jpg");
-    width: 100%;
-    height: auto;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: left;
     background-size: cover;
-    position: relative;
+    background-repeat: no-repeat;
+    padding: 10px;
+    color: var(--lighter);
+    border: medium solid var(--light);
 }
 
-.nav-btn {
-    background-color: var(--light);
-    color: var(--dark);
-    border: none;
-}
-
-.nav-btn:hover {
-    background-color: var(--dark);
-    color: var(--light);
-    border: none;
-}
-
-.nav-btn a {
-    color: var(--dark);
- }
-
- .nav-btn a:hover {
-    color: var(--light);
- }
-
- .nav-btn-toggle {
-    background-color: var(--light);
-    color: var(--dark);
-    border: none;
- }
-
- nav {
-     border-radius: .25em;
-     background-color: var(--light);
- }
-
-.footer-btn  {
-    color: var(--light);
-    background-color: transparent;
-    border: transparent;
-    border-radius: 1em;
-    transition: ease-in-out;
-    display: block;
-    padding: .5rem 1rem;
-    text-decoration: none;
-    transition: ease-in-out;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.footer-btn:hover {
-    color: var(--medium);
-    background-color: var(--light);
-    border: none;
-    box-shadow: 0 0 15px black;
-    border-radius: 1em;
-    transition: ease-in-out;
+h1 {
+    font-size: 300%;
+    width: 80%;
+    margin: 10px;
 }
 
 #tagline {
     font-style: italic;
     line-height: 1.0;
-    font-size: .85em;
+    font-size: 50%;
     color: var(--accent);
 }
 
 #profile {
     width: 15%;
-    opacity: 75%;
+    border-radius: 50%;
 }
 
-.mainbckgrnd {
-    background:  linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
-    box-shadow: 0 0 2px 2px var(--dark);
-    border-radius: .5em;
-}
+/* the nav bar is broken out from the header. It should stick on the top of the page as users scroll through. The z-index was added to pull this in the forefront of the other sections. It should also link to the three sections of the page. When the window shrinks, this should switch to a column layout. At a later date this should also turn into a hamurger menu.  */
 
-.accent {
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 2px;
     color: var(--accent);
+    z-index: 1;
+
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--lighter); 
+    border-radius: 0px;
+    border-color: var(--accent);
+    border-width: thin;
+    border-style: solid;
+    width: 100%;
+}
+
+li {
+    margin: auto 2%;
+    padding: 10px;
 }   
 
-.responsive-img {
-    box-shadow: 0 0 5px 5px var(--dark);
-    border-radius: .25em;
-
+a.link {
+    text-decoration: none;
+    color: var(--medium);
+    background-color: var(--lighter);
+    padding: 5px;
+    border: medium solid var(--accent);
+    border-radius: 10px;
+    font-size: 75%;
 }
 
-.responsive-img:hover {
-    box-shadow: 0 0 5px 5px var(--accent);
-
+li a:hover {
+    color: var(--medium);
+    background-color: var(--light);
+    border: none;
+    box-shadow: 0 0 15px black;
 }
 
-.list > ul {
-    list-style-type: disc;
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    align-items: center;
 }
+
+h2 {
+    font-size: 175%;
+    color: var(--accent);
+    border: medium solid var(--light);
+    background-color: var(--dark);
+    text-align: center;
+    width: 100%;
+    padding: 10px 10px 0 5px;
+}
+p {
+    width: 90;
+    padding: 10px 5px 5px 5px; 
+}
+
+div.imageblock {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+img.imgstandard {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin: 5px;    
+}
+
+div.projectcontainer {
+    position: relative;
+    width: 100%;
+    float: center;
+    display: flex;
+    align-content: flex-start;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.projectcontainer div:first-of-type {
+    position: relative;
+    width: 100%;
+}
+
+.projectcontainer div {
+    position: relative;
+    width: 30%;
+}   
+
+.projecttitle {
+    font-size: 125%;
+}
+
+a p{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    background-color: var(--light);
+    color: var(--dark);
+    text-align: left;
+    text-decoration: none;
+    word-wrap: unset;
+    box-shadow: 0px 0px 40px var(--lighter);
+}
+
+img.projects{
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 5%;  
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark);
+    padding: 2%;
+    color: var(--lighter);
+    border: thin;
+    border-color: var(--lighter);
+}
+
+#contact {
+    background-color: inherit;
+    border: none;
+}
+
+@media screen and (max-width: 472px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    nav {
+        position: static;
+    }
+
+    nav ul {
+      flex-direction: column;
+    }
+
+    li {
+        padding: 5px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    h1 {
+       font-size: 175%;
+    }
+
+    h2 {
+        font-size: 125%;
+    }
+
+    p {
+        font-size: 50%;
+    }
+
+
+    #tagline {
+        display: none;
+    }
+
+
+  }
