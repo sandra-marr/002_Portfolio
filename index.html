@@ -4,89 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <title>SRM: Web Development</title>
 </head>
-<body>
-    <header>
-        <h1>Sandy Marr <span id="tagline">Web Development Portfolio</span>
-        </h1>
-        <img id="profile" src="./assets/images/Profile.jpeg" alt""/>
-    </header>
-    <nav>
-        <ul>
-            <li> <a class="link" href="#aboutme">About Me</a></li>
-            <li> <a class="link" href="#projects">Projects</a></li>
-            <li> <a class="link" href="#dog">Dog Days</a></li>
-            <li> <a class="link" href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2 id="aboutme">About Me</h2>
-            <p> Hello and thank you for visiting my site! I was born and raised in Chicago, but have fallen in love with the PNW since moving out here in the fall of 2014. By trade, I'm a design and test engineer for full scale aircraft testing, but I am shifting focus to a career in web development. </p>
-            <p>Outside of work, you can find me spending time outside with my husband and our dog. We love taking quick day hikes through Discovery Park in Seattle, and sailing out on the Puget Sound (when it's not raining too much). Anything that gets us moving and in the sun is a plus! I am also a big fan of Crossfit and have found a great community at the local gym. Over the next 6 months as I learn more about becoming a web developer, I'm hoping to bring my drive, passion, and knowledge into this new career as I continue to grow and learn.</p>
-            <div class="imageblock">
-                <img class="imgstandard" src="./assets/images/bikes.JPG" atl="After a long bike ride to West Seattle, we sat down for some snacks and had a great view of the islands across the way.">
-                <img  class="imgstandard" src="./assets/images/Student Bio.jpg" atl="Chris, Bentley, and I on a Pirate Ship Cruise on Lake Washington at sunset. You can see Mt. Rainier in the background." >
-                <img class="imgstandard" src="./assets/images/RalstonLake.png" atl="A view from our campsite at Ralston Lake in the Spring. Watch out for those snow bridges on the hike!">
-            </div>
-        </section>
-        <section>
-            <h2 id="projects">Projects</h2>
-            <div class="projectcontainer">
-                <div>
-                    <a href="https://sandra-marr.github.io/Homework01/" target="_blank">
-                        <img class="projects" src="./assets/images/Horiseon.png" atl="This is a preview of Horiseon's landing page." />
-                        <p><span class=projecttitle> - Horiseon Code Refrator - </span><br>
-                        Improved semantics, SEO, and simplistic styling.</p>
-                    </a> 
-                </div>
-                <div>
-                    <a href="" target="_blank">
-                        <img class="projects" src="./assets/images/cover.JPG" atl="Project in work" />
-                        <p>Under Construction</p>
-                    </a> 
-                </div>
-                <div>
-                    <a href="" target="_blank">
-                        <img class="projects" src="./assets/images/cover.JPG" atl="Project in work" />
-                        <p>Under Construction</p>
-                    </a> 
-                </div> <div>
-                    <a href="" target="_blank">
-                        <img class="projects" src="./assets/images/cover.JPG" atl="Project in work" />
-                        <p>Under Construction</p>
-                    </a> 
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2 id="dog">Dog Days</h2>
-            <p>This is my dog, Bentley. He is a flat-coated retriever, is extremly friendly, and always up for an adventure. He is a huge part of my life, so I couldn't miss an opportunity to share the joy.</p>
-            <div class="imageblock">
-                <img class="imgstandard" src="./assets/images/dog1.JPG" atl="Bentley enjoys long walks through the neighborhood, but when he is tired and lays down, you are stuck until he is ready to keep going." />
-                <img class="imgstandard" src="./assets/images/dog3.JPG" atl="Everyonce in a while, Bentley will take a dip in the sound. Here he is after a swim near Golden Gardens." />
-                <img class="imgstandard" src="./assets/images/dog2.JPG" atl="Bentley spent a lot of time at Ella Bailey Park in 2020, enjoying the views of the city and Mt. Rainier." />
-               
-            </div>
-        </section>
-
-    </main>
-    <!-- <aside>
-
-    </aside> -->
-    <footer>
-        <ul id="contact">
-            <li> <a class="link" href="http://www.linkedin.com/in/sandra-r-marr" target="_blank">LinkedIn</a></li>
-            <li> <a class="link" href="https://github.com/sandra-marr" target="_blank">GitHub</a></li>
-            <li>
+<body class="landing-page container-fluid d-flex justify-content-center align-items-center flex-column h-100">
+    <div class="hero-image d-flex align-items-center justify-content-center">
+        <div class="hero-text d-flex flex-center flex-column justify-content-center align-items-center">
+          <h1 class="p-2">SRM Web</h1>
+          <h3 id="tagline">Full-Stack Web Development</h3>
+          <div class="btn-group p-2" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary btn-sm nav-btn"><a href="./AboutMe.html">About</a></button>
+            <button type="button" class="btn btn-secondary btn-sm nav-btn"><a href="./Projects.html">Work</a></button>
+            <button type="button" class="btn btn-secondary btn-sm nav-btn"><a href="./DogDays.html">Dog Days</a></button>
+          </div>
+        </div>
+    </div>
+    <footer class="position-absolute bottom-0 start-50 translate-middle-x fs-5">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="footer-btn active" aria-current="page" href="http://www.linkedin.com/in/sandra-r-marr" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="footer-btn active" aria-current="page" href="https://github.com/sandra-marr" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="nav-item">
                 <address>
-                    <a class="link" href="mailto:srpeters44@gmail.com">Email</a>
+                    <a class="footer-btn active" aria-current="page" href="mailto:srpeters44@gmail.com">
+                        <i class="far fa-envelope"></i>
+                    </a>
                 </address>
             </li>
-        </ul>
-    </footer>
+          </ul>
+    </footer> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aaf43dd7fc.js" crossorigin="anonymous"></script>
 </body>
 </html>
