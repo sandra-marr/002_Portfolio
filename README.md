@@ -12,6 +12,8 @@ Once the baseline for html and css was in place, I was able to work through an i
 
 There are areas where I plan to make improvements as new skills are learned, but for now, I am excited that I was able to build a page from scratch. 
 
+![deployed page](./assets/images/portfolio.png)
+
 Dive in! https://sandra-marr.github.io/Homework02/
 
 ## MIT License
