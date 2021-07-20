@@ -14,7 +14,7 @@ There are areas where I plan to make improvements as new skills are learned, but
 
 ![deployed page](./assets/images/portfolio.png)
 
-Dive in! https://sandra-marr.github.io/Homework02/
+Dive in! https://sandra-marr.github.io/002_Portfolio
 
 ## MIT License
 
